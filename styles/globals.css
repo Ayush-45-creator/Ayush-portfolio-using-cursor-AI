@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f7fbfc;
+}
+
+html, body, #__next {
+  height: 100%;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #7c3aed, #ff6fb5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-surface {
+  background: rgba(255,255,255,0.9);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(2,6,23,0.06);
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.20);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.06);
+  border-radius: 12px;
+}
+
+.section-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+.section-title {
+  color: #9aa4b2;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .12em;
+}
+.section-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+.section-description {
+  color: #9aa4b2;
+  max-width: 640px;
+}
+.nav-tab {
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+@media (max-width: 768px) {
+  .section-wrapper { padding: 28px 16px; }
+  .section-heading { font-size: 22px; }
+}
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.main-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.section-snap {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
